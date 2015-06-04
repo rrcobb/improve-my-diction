@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>Make Me Sound Smart</title>
+  <link rel="stylesheet" href="{{url_for('static',filename='main.css')}}">
+</head>
+<body>
+{% if not submitted %}
+  <h1>MAKE ME SOUND SMART</h1>
+  <img src="http://upload.wikimedia.org/wikipedia/en/0/02/Homer_Simpson_2006.png">
+  <form action="/" method="POST">
+      <input type="textarea" name="text_to_translate">
+      <input type="submit">
+  </form>
+{% else %}
+  <h1>Your verbage, more eloquent</h1>
+  <img src="http://static.tvtropes.org/pmwiki/pub/images/Monocle-man_545.gif">
+  <p>{{translated_text}}</p>
+{% endif %}
+  
+</body>
+</html>
